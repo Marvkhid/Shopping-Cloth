@@ -13,8 +13,7 @@ const Navbar = () => {
 
   return (
    <div>
-    <div className="flex justify-around p-4 shadow-md">
-
+    <div className='navbar'>
         <div className="nav-logo">
             <img src={logo} alt="" />
         <p>SHOPPER</p>
