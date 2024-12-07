@@ -1,3 +1,4 @@
+/* Default styling for larger screens (desktop/laptops) */
 .new-collections {
     display: flex;
     flex-direction: column;
@@ -5,21 +6,74 @@
     gap: 10px;
     margin-bottom: 100px;
 }
+
 .new-collections h1 {
     color: rgb(68, 64, 64);
     font-size: 50px;
     font-weight: 600;
 }
-.new-collections hr{
+
+.new-collections hr {
     width: 250px;
     height: 2px;
     display: block;
     border-radius: 10px;
     background-color: #dd0f0f;
 }
+
 .collections {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 50px;
     gap: 30px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (portrait) and below (screen width ≤ 768px) */
+@media (max-width: 768px) {
+    .new-collections h1 {
+        font-size: 40px;
+    }
+
+    .new-collections hr {
+        width: 200px;
+    }
+
+    .collections {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Mobile devices (screen width ≤ 480px) */
+@media (max-width: 480px) {
+    .new-collections h1 {
+        font-size: 30px;
+    }
+
+    .new-collections hr {
+        width: 150px;
+    }
+
+    .collections {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
+
+/* For smaller devices (screen width ≤ 360px) */
+@media (max-width: 360px) {
+    .new-collections h1 {
+        font-size: 26px;
+    }
+
+    .new-collections hr {
+        width: 120px;
+    }
+
+    .collections {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 }

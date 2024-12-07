@@ -1,23 +1,25 @@
+/* Default styling for larger screens (desktop/laptops) */
 .navbar {
     display: flex;
     justify-content: space-around;
     padding: 16px;
     box-shadow: 0 1px 3px -2px black;
-  
 }
 
-.nav-logo{
+.nav-logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .nav-logo p {
     color: #171717;
     font-size: 38px;
     font-weight: 600;
 }
+
 .nav-menu {
-    display:flex;
+    display: flex;
     align-items: center;
     list-style: none;
     gap: 50px;
@@ -27,6 +29,7 @@
     font-size: 20px;
     font-weight: 500;
 }
+
 .nav-menu li {
     display: flex;
     flex-direction: column;
@@ -36,6 +39,7 @@
     text-align: center;
     cursor: pointer;
 }
+
 .nav-menu hr {
     border: none;
     width: 80%;
@@ -43,11 +47,13 @@
     border-radius: 10px;
     background: red;
 }
+
 .nav-login-cart {
     display: flex;
     align-items: center;
     gap: 45px;
 }
+
 .nav-login-cart button {
     width: 127px;
     height: 58px;
@@ -60,9 +66,11 @@
     background: white;
     cursor: pointer;
 }
+
 .nav-login-cart button:active {
-    background: #dac6c6;
+    background: #e4b9b9;
 }
+
 .nav-cart-count {
     width: 22px;
     height: 22px;
@@ -76,4 +84,123 @@
     font-size: 14px;
     background-color: red;
     color: white;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (portrait) and below (screen width ≤ 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .nav-menu li {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .nav-logo p {
+        font-size: 30px;
+    }
+
+    .nav-login-cart {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .nav-login-cart button {
+        width: 100%;
+    }
+
+    .nav-cart-count {
+        margin-top: -10px;
+        margin-left: 0;
+    }
+}
+
+/* Mobile devices (screen width ≤ 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-logo p {
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .nav-menu li {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .nav-login-cart button {
+        font-size: 18px;
+        height: 50px;
+    }
+
+    .nav-cart-count {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        margin-top: -25px;
+        margin-left: -40px;
+    }
+}
+
+/* Smaller devices (screen width ≤ 360px) */
+@media (max-width: 360px) {
+    .nav-menu {
+        font-size: 14px;
+        gap: 12px;
+    }
+
+    .nav-logo p {
+        font-size: 22px;
+    }
+
+    .nav-login-cart button {
+        font-size: 16px;
+        height: 45px;
+    }
+
+    .nav-cart-count {
+        font-size: 10px;
+        width: 16px;
+        height: 16px;
+        margin-top: -20px;
+        margin-left: -35px;
+    }
+}
+
+/* For larger screens (screen width ≥ 1024px, i.e., desktop) */
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-menu {
+        gap: 60px;
+    }
+
+    .nav-logo p {
+        font-size: 40px;
+    }
+
+    .nav-login-cart button {
+        font-size: 22px;
+    }
 }
